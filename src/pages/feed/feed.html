@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Feed Page</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card *ngFor="let article of articles">
+    <ion-item class="item-text-wrap">
+      <h2 class="wrap">{{article.title.$t}}</h2>
+    </ion-item>
+    
+ <img src="{{getImage(article.content.$t)}}" *ngIf="getImage(article.content.$t)">
+
+    <ion-card-content>
+      <p [innerHTML]="getContentSnippet(article.content.$t)">
+        
+      </p>
+      <!--<div class="date">{{article.publishedDate | date}}</div>-->
+    </ion-card-content>
+    <!-- Tags -->
+    <!--<ion-row>
+      <ion-col>
+        <a class="tag" *ngFor="let tag of article.categories">
+      {{tag}}
+      </a>
+      </ion-col>
+    </ion-row>-->
+  </ion-card>
+</ion-content>
