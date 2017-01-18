@@ -9,7 +9,7 @@ export class FeedService {
 
     constructor(http: Http) {
         this.http = http;
-        this.feedURL = 'http://localhost/blogfeed/';
+        this.feedURL = 'http://demos.9lessons.info/blogfeed/';
     }
 
     getPosts(tag, limit) {

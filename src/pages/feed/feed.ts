@@ -21,7 +21,7 @@ export class FeedPage {
 
   getPosts(category,limit){
     this.feedService.getPosts(category, limit).subscribe(response => {
-      console.log(response.feed.entry);
+      console.log(response);
       this.articles = response.feed.entry;
     })
   }

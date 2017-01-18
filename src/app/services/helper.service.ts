@@ -5,13 +5,15 @@ export class Helper {
 
     constructor() {
 
-
     }
+    
     getImage(content) {
         var myRegexp = new RegExp(/<img.*?src="(.*?)"/);
         var match = myRegexp.exec(content);
-        if (match)
-            return match[1];
+        if (match){
+         return match[1];
+        }
+            
     }
 
     getContentSnippet(str) {

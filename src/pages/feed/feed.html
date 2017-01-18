@@ -15,15 +15,15 @@
       <p [innerHTML]="getContentSnippet(article.content.$t)">
         
       </p>
-      <!--<div class="date">{{article.publishedDate | date}}</div>-->
+      <div class="date">{{article.published.$t | date}}</div>
     </ion-card-content>
     <!-- Tags -->
-    <!--<ion-row>
+    <ion-row>
       <ion-col>
-        <a class="tag" *ngFor="let tag of article.categories">
-      {{tag}}
+        <a class="tag" *ngFor="let tag of article.category">
+      {{tag.term}}
       </a>
       </ion-col>
-    </ion-row>-->
+    </ion-row>
   </ion-card>
 </ion-content>
